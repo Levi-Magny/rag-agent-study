@@ -1,0 +1,12 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "python.formatting.provider": "pylint",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--disable=C0114",  // Disable missing module docstring
+        "--disable=C0115",  // Disable missing class docstring
+        "--disable=C0116"   // Disable missing function docstring
+    ]
+}
