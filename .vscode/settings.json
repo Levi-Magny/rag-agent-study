@@ -7,5 +7,15 @@
         "--disable=C0114", // Disable missing module docstring
         "--disable=C0115", // Disable missing class docstring
         "--disable=C0116" // Disable missing function docstring
-    ]
+    ],
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /home/levi/git/rag-agent-study && python3 - << 'EOF'\npath = \"pyproject\\.toml\"\nwith open\\(path\\) as f:\n    content = f\\.read\\(\\)\ncontent = content\\.replace\\(\n    \"\\[project\\.scripts\\]\",\n    \"\\[dependency-groups\\]\\\\ndev = \\[\\\\n    \\\\\"pytest>=8\\.0\\.0\\\\\",\\\\n\\]\\\\n\\\\n\\[project\\.scripts\\]\"\n\\)\nwith open\\(path, \"w\"\\) as f:\n    f\\.write\\(content\\)\nEOF\ncat pyproject\\.toml$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^uv run src/my_agent/my_rag\\.py --help$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
 }
